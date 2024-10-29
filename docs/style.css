@@ -67,13 +67,16 @@ h1 {
 
 .player {
     flex: 1;
-    padding: 10px;
+    padding: 20px;
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 0.1);
-    margin: 0 5px; /* Adjust margins for spacing */
-    text-align: center;
-    position: relative; /* For serving indicator */
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Align children in a column */
+    align-items: center; /* Center items horizontally */
 }
 
 .player h2 {
@@ -93,27 +96,14 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.serve {
-    position: absolute;
-    top: -20px; /* Adjusted position for serving indicator */
-    left: 50%;
-    transform: translateX(-50%); /* Center it */
-    padding: 5px 10px; /* Padding for serve indicator */
-    font-weight: 600;
-    font-size: 1rem;
-    background-color: var(--accent-color);
-    color: white;
-    border-radius: 5px;
-    opacity: 0.8; /* Slight transparency */
-    text-transform: uppercase;
-    z-index: 10; /* Ensure it stays above other elements */
-}
-
-.serve-indicator {
-    margin-top: 10px; /* Space between serve indicator and player name */
-    font-weight: 600;
-    color: var(--primary-color);
-    font-size: 1rem;
+..scores {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .buttons {
