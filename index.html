@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Table Tennis Scorer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="docs/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="scorer">
+            <h1>Table Tennis Scorer</h1>
+            <div class="settings">
+                <div class="input-group">
+                    <label for="playerAName">Player A Name</label>
+                    <input type="text" id="playerAName" placeholder="Enter name" value="Player A">
+                </div>
+                <div class="input-group">
+                    <label for="playerBName">Player B Name</label>
+                    <input type="text" id="playerBName" placeholder="Enter name" value="Player B">
+                </div>
+                <div class="input-group">
+                    <label for="firstServer">First Server</label>
+                    <select id="firstServer">
+                        <option value="A">Player A Serves First</option>
+                        <option value="B">Player B Serves First</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="gameType">Game Type</label>
+                    <select id="gameType">
+                        <option value="5">Game to 5</option>
+                        <option value="11" selected>Game to 11</option>
+                    </select>
+                </div>
+            </div>
+            <div class="scores">
+                <div id="playerA" class="player">
+                    <div class="serve">SERVING</div>
+                    <h2 id="playerALabel">Player A</h2>
+                    <div class="score">0</div>
+                </div>
+                <div id="playerB" class="player">
+                    <div class="serve">SERVING</div>
+                    <h2 id="playerBLabel">Player B</h2>
+                    <div class="score">0</div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="deleteA" class="delete-btn">Delete Point A</button>
+                <button id="deleteB" class="delete-btn">Delete Point B</button>
+            </div>
+            <button id="reset" class="reset-btn">New Game</button>
+            <div id="winner" class="winner"></div>
+        </div>
+    </div>
+    <script src="docs/scrip.js" defer></script>
+</body>
+
+</html>

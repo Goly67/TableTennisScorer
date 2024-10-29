@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Orbitron:wght@700&display=swap');
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+            --card-bg-color: #ffffff;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .scorer {
+            background-color: var(--card-bg-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            width: 100%;
+            height: 710px;
+            overflow-y: auto;
+            zoom: 0.8;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: -2rem;
+        }
+
+        .scores {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            background-color: var(--primary-color);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .player {
+            flex: 1;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .player:first-child {
+            margin-right: 30px;
+        }
+
+        .player h2 {
+            margin-bottom: 15px;
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 2.4rem;
+        }
+
+        .score {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 5rem;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--accent-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .serve {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 8px;
+            font-weight: 600;
+            font-size: 1.7rem;
+            background-color: var(--accent-color);
+            color: white;
+            opacity: 0;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .serving {
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+        }
+
+        .serving .serve {
+            opacity: 1;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 15px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .score-btn,
+        .delete-btn {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .score-btn:hover,
+        .delete-btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .reset-btn {
+            background-color: var(--accent-color);
+            color: white;
+            width: 100%;
+        }
+
+        .reset-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        .winner {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-top: 30px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .settings {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .input-group label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .settings input,
+        .settings select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: white;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .settings input:focus,
+        .settings select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .scorer {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .scores {
+                flex-direction: column;
+            }
+
+            .player:first-child {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .score {
+                font-size: 4rem;
+            }
+
+            .buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .settings {
+                grid-template-columns: 1fr;
+            }
+        }
