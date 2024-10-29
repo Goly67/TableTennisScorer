@@ -93,6 +93,19 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.serve-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px; /* Space below serve info */
+}
+
+.serve-info div {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
 .buttons {
     display: flex;
     flex-direction: column;
