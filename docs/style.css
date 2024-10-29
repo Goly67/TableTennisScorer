@@ -20,26 +20,27 @@
         }
 
         .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            margin: 0;
-        }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
 
-        .scorer {
-            background-color: var(--card-bg-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            text-align: center;
-            width: 100%;
-            height: 710px;
-            overflow-y: auto;
-            zoom: 0.8;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+.scorer {
+    background-color: var(--card-bg-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    overflow-y: auto;
+    zoom: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 
         h1 {
             margin-bottom: 30px;
