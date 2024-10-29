@@ -95,7 +95,7 @@ h1 {
 
 .serve {
     position: absolute;
-    top: -20px; /* Move it above the player label */
+    top: -20px; /* Adjusted position for serving indicator */
     left: 50%;
     transform: translateX(-50%); /* Center it */
     padding: 5px 10px; /* Padding for serve indicator */
@@ -107,6 +107,13 @@ h1 {
     opacity: 0.8; /* Slight transparency */
     text-transform: uppercase;
     z-index: 10; /* Ensure it stays above other elements */
+}
+
+.serve-indicator {
+    margin-top: 10px; /* Space between serve indicator and player name */
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1rem;
 }
 
 .buttons {
