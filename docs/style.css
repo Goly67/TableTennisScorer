@@ -41,6 +41,7 @@ html, body {
     align-items: center;
     overflow-y: auto;
     box-sizing: border-box;
+    zoom: 0.8;
 }
 
 h1 {
@@ -65,7 +66,7 @@ h1 {
     box-sizing: border-box;
 }
 
-..player {
+.player {
     flex: 1;
     padding: 20px;
     border-radius: 12px;
@@ -74,16 +75,31 @@ h1 {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    display: flex;
-    flex-direction: column; /* Align children in a column */
-    align-items: center; /* Center items horizontally */
 }
 
 .serve {
-    margin-bottom: 10px; /* Space between the serving indicator and player name */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 3px;
     font-weight: 600;
-    color: white; /* Change to the appropriate color */
-    font-size: 1rem;
+    font-size: 1.1rem;
+    background-color: var(--accent-color);
+    color: white;
+    opacity: 0;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.serving {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+}
+
+.serving .serve {
+    opacity: 1;
 }
 
 .player h2 {
@@ -92,6 +108,7 @@ h1 {
     font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
+    margin-top: 1rem;
 }
 
 .score {
@@ -171,6 +188,8 @@ button {
     font-weight: 600;
     color: var(--primary-color);
     margin-bottom: 5px;
+    margin-top: -1rem;
+    
 }
 
 .input-group input,
@@ -184,6 +203,17 @@ button {
     color: var(--text-color);
     box-sizing: border-box;
     transition: all 0.3s ease;
+}
+
+.winner {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-top: 20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 @media (max-width: 768px) {
