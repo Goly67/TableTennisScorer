@@ -68,7 +68,7 @@ h1 {
 
 .player {
     flex: 1;
-    margin: 0 10px; /* Optional: Adjust side margin for each player */
+    margin: 0 6px; /* Optional: Adjust side margin for each player */
     padding: 20px;
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -231,7 +231,7 @@ button {
     }
 
     .player {
-        margin: 0 2px; /* Adjust margins for smaller screens */
+        margin: 0 7px; /* Adjust margins for smaller screens */
     }
 
     .buttons {
